@@ -23,8 +23,11 @@ function showSuccess(input, message) {
 // Event listeners
 form.addEventListener('submit', function (e) {
     e.preventDefault();
+
     isEmpty(username, isValidUsername);
     isEmpty(email, isValidEmail);
+    isEmpty(password, isValidPassword);
+    isEmpty(password2, isValidPassword);
 
 });
 function isValidUsername(element) {
@@ -34,11 +37,17 @@ function isValidEmail(element) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(element.value).toLocaleLowerCase());
 }
+function isValidPassword(element) {
+    console.log(element.value.length);
+    return element.value.length > 8;
+}
 function isEmpty(element, checkValid) {
     if (element.value === '') {
         showError(element, `${element.id}을/를 확인해 주세요!`);
     } else if (checkValid(element)) {
         showSuccess(element);
+    } else {
+        showError(element, `${element.id}을/를 확인해 주세요!`);
     }
 }
 
