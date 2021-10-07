@@ -38,7 +38,6 @@ function isValidEmail(element) {
     return re.test(String(element.value).toLocaleLowerCase());
 }
 function isValidPassword(element) {
-    console.log(element.value.length);
     return element.value.length > 8;
 }
 function isEmpty(element, checkValid) {
