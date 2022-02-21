@@ -34,3 +34,37 @@
 #skip a:active, #skip a:focus {
     top:0;
 }
+
+/* 헤더 */
+.header {
+
+}
+
+.header .header-menu {
+    text-align: right;
+}
+
+.header .header-menu a {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+.header .header-menu a:hover {
+    color: #366;
+}
+
+.header .header-title {
+    text-align: center;
+}
+.header .header-title h1 { 
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    margin: 40px
+}
+
+.header .header-icon {
+
+}
