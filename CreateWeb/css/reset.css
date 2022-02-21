@@ -10,4 +10,6 @@
      color: #390; 
  }
 
- 
+ /* 블릿 스타일 */
+
+ dl, ul, li, ol, menu { list-style: none ;}
